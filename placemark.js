@@ -51,4 +51,23 @@ function init () {
     myMap.geoObjects
         .add(myPlacemark_URGAHU)
         .add(myGeoObject_Lyavshenko);
+
+        
+
+    // Для добавления элемента управления на карту
+    // используется поле map.controls.
+    // Это поле содержит ссылку на экземпляр класса map.control.Manager.
+    
+    // Добавление элемента в коллекцию производится
+    // с помощью метода add.
+
+    // В метод add можно передать строковый идентификатор
+    // элемента управления и его параметры.
+    myMap.controls
+        // Кнопка изменения масштаба.
+        .add('zoomControl', { left: 5, top: 5 })
+        // Список типов карты
+        .add('typeSelector')
+        // Стандартный набор кнопок
+        .add('mapTools', { left: 35, top: 5 });
 }
