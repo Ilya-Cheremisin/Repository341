@@ -28,6 +28,9 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#663fb5">
     <link rel="stylesheet" href="css/landio.css">
+
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+    <script src="js/placemark.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -205,8 +208,11 @@
 
     <section class="section-pricing bg-faded text-xs-center">
       <div class="container">
-        <h3>Manage your subscriptions</h3>
+        <h3>Где прохожу обучение</h3>
         <div class="row p-y-3">
+
+        <div id="map" style="width:1100px; height:400px"></div>
+
           <div class="col-md-4 p-t-md wp wp-5">
             <div class="card pricing-box">
               <div class="card-header text-uppercase">
