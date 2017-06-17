@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+			myPlacemark_2;
+			var myRectangle;
+
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [56.84, 60.61],
+                zoom: 7
+            }); 
+            
+            var myPlacemark= new ymaps.Placemark([56.95, 60.35], {
+                hintContent: 'Ekaterinburg',
+                balloonContent: 'The capital of the Urals'
+            },{
+        iconLayout: 'default#image',
+        iconImageHref: '33.png',
+        iconImageSize: [50, 62],
+        iconImageOffset: [-1, -42]
+    })
+	        var myPlacemark_2= new ymaps.Placemark([56.50, 61.69], {
+                hintContent: 'Kamensk',
+            },{
+        iconLayout: 'default#image',
+        iconImageHref: '33.png',
+        iconImageSize: [50, 62],
+        iconImageOffset: [-1, -42]
+    });
+	var myRectangle = new ymaps.GeoObject({
+      geometry: {
+        type: "Rectangle",
+        coordinates: [[57.70, 60.5],[56.5, 61.7]]
+      }
+    });
+            
+            myMap.geoObjects.add(myPlacemark);
+			myMap.geoObjects.add(myPlacemark_2);
+			myMap.geoObjects.add(myRectangle);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="map" style="width: 600px; height: 400px"></div>
+</body>
+
+</html>
