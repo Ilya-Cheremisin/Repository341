@@ -3,36 +3,69 @@
 </head>
 <body>
 <div class="header">
-<h1>Магазин товаров</h1>
+<h1><big>Магазин товаров</big></h1>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Быстрый старт. Размещение интерактивной карты на странице</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 7,
+				controls: ['smallMapDefaultSet']
+		   }); 
+		   
+		   myMap.controls.add('routeEditor');
+		   myMap.controls.add('trafficControl');
+            
+            myPlacemark = new ymaps.Placemark([55.76, 37.64],
+			{
+                hintContent: 'Москва!',
+                balloonContent: 'Столица России',
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        
+		
+		var myPlacemark = new ymaps.Placemark([55.78, 37.68], {}, {
+			iconLayout: 'default#image',
+			iconImageHref: 'icon.png',
+			iconImageSize: [30, 42],
+			iconImageOffset: [-3, -42]
+		});
+			myMap.geoObjects.add(myPlacemark);
+			
+		var myPolyline = new ymaps.GeoObject({
+			geometry: {
+			type: "LineString",
+			coordinates: [[55.76, 37.64],[55.78, 37.68]]
+      }
+    });
+			myMap.geoObjects.add(myPolyline);
+
+	}
+		
+    </script>
+</head>
+
+<body>
+    <div id="map" style="width: 600px; height: 400px; position:absolute; top:800px;"></div>
+</body>
+
+</html>
 
 <div class="bs-docs-example">
 <table class="table">
 <thead>
 <tr class="error" bgcolor="#eee1">
-<th>№</th>
-<th>Имя</th>
-<th>Фамилия</th>
-<th>Отчество</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Larry</td>
-<td>the Bird</td>
-<td>@twitter</td>
 </tr>
 </tbody>
 </table>
@@ -78,14 +111,16 @@
 
 <style>
 .header {
-background:url(R.jpg);
+background:url(M.jpg);
 height:500px;
+left:0px;
+
 }
 
 h1{position:absolute;
-top:25px;
+top:50px;
 left:25px;
-color:#8FFF8DC}
+color:#000080}
 
 .leftCol {widht:25%;
 float:left;
