@@ -151,6 +151,7 @@ ORDER BY levenshtein(name, '$searchname')
 		 $region=$row['region']; // здесь название поля
 		 $name=str_replace("'"," ", $name);
 		 $names=str_replace("'"," ", $names);
+		 $names=str_replace(",",", ", $names);
 		 
 		 
 
@@ -498,8 +499,8 @@ ORDER BY levenshtein(name, '$searchname')
 		 $population=$row['population']; // здесь название поля
 		 $year_created=$row['year_created']; // здесь название поля
 		 $region=$row['region']; // здесь название поля
-		 $name=str_replace("'"," ", $name);
-		 $names=str_replace("'"," ", $names);
+		 $name=str_replace("'",", ", $name);
+		 $names=str_replace(",",", ", $names);
 		 
 		 
 
