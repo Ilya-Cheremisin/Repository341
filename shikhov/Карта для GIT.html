@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Карта для GIT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [56.828729, 60.605679],
+                zoom: 7
+            }); 
+                  
+
+
+        
+		 myPlacemark = new ymaps.Placemark([56.8145, 60.6079], {
+                hintContent: 'Муниципальный театр балета Щелкунчик',
+                balloonContent: 'Тут описание надо!'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+			
+		 myPlacemark = new ymaps.Placemark([56.8154, 60.6109], {
+                hintContent: 'Музей истории трамвая и троллейбуса',
+                balloonContent: 'Тут описание надо!'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+			
+		 myPlacemark = new ymaps.Placemark([56.8346, 60.6165], {
+                hintContent: 'Екатеринбургская галерея современного искусства',
+                balloonContent: 'Тут описание надо!'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+			
+		 myPlacemark = new ymaps.Placemark([56.8171, 60.6082], {
+                hintContent: 'УрГПУ, Факультет социологии',
+                balloonContent: 'Тут описание надо!'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+			
+		 myPlacemark = new ymaps.Placemark([56.8283, 60.6177], {
+                hintContent: 'УрФУ',
+                balloonContent: 'Тут описание надо!'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+			        }
+				
+    </script>
+</head>
+
+<body>
+    <div id="map" style="width: 600px; height: 400px"></div>
+</body>
+
+</html>
