@@ -3,12 +3,13 @@
 </head>
 <body>
 <div class="header">
+
 <h1><big>Магазин товаров 432432432</big></h1>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Быстрый старт. Размещение интерактивной карты на странице</title>
+    <title>Быстрый старт. Всякое разное. Размещение интерактивной карты на странице</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
     <script type="text/javascript">
