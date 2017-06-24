@@ -3,7 +3,7 @@
 </head>
 <body>
 <div class="header">
-<h1><big>Магазин товаров</big></h1>
+<h1><big>Магазин товаров 222222</big></h1>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
